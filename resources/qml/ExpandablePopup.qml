@@ -183,7 +183,7 @@ Item
                     verticalCenter: parent.verticalCenter
                     margins: background.padding
                 }
-                source: expanded ? UM.Theme.getIcon("arrow_bottom") : UM.Theme.getIcon("arrow_left")
+                source: expanded ? UM.Theme.getIcon("arrow_bottom") : (catalog.i18nIsRightToLeft()?UM.Theme.getIcon("arrow_right"):UM.Theme.getIcon("arrow_left"))
                 visible: source != ""
                 width: UM.Theme.getSize("standard_arrow").width
                 height: UM.Theme.getSize("standard_arrow").height

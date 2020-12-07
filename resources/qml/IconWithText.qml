@@ -20,6 +20,7 @@ Item
     property alias text: label.text
     property alias font: label.font
     property alias elide: label.elide
+    property alias mirrorIcon: icon.mirror
     property real margin: UM.Theme.getSize("narrow_margin").width
 
     // These properties can be used in combination with layouts.
@@ -57,7 +58,7 @@ Item
         renderType: Text.NativeRendering
         elide: Text.ElideRight
         verticalAlignment: Text.AlignVCenter
-
+        horizontalAlignment: Text.AlignLeft
         anchors
         {
             left: icon.right
