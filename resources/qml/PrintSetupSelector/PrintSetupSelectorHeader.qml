@@ -38,7 +38,7 @@ RowLayout
         }
         font: UM.Theme.getFont("medium")
         elide: Text.ElideMiddle
-
+        mirrorIcon: catalog.i18nIsRightToLeft()
         UM.SettingPropertyProvider
         {
             id: layerHeight

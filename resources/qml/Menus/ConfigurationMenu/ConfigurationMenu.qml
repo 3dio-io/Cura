@@ -58,6 +58,7 @@ Cura.ExpandablePopup
                         extruderEnabled: model.enabled
                         height: parent.height
                         width: height
+                        anchors.left: parent.left
                     }
 
                     // Label for the brand of the material
@@ -70,6 +71,7 @@ Cura.ExpandablePopup
                         font: UM.Theme.getFont("default")
                         color: UM.Theme.getColor("text")
                         renderType: Text.NativeRendering
+                        horizontalAlignment: Text.AlignLeft
 
                         anchors
                         {
@@ -92,6 +94,7 @@ Cura.ExpandablePopup
                         font: UM.Theme.getFont("default_bold")
                         color: UM.Theme.getColor("text")
                         renderType: Text.NativeRendering
+                        horizontalAlignment: Text.AlignLeft
 
                         anchors
                         {

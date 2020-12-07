@@ -19,6 +19,8 @@ Item
         id: catalog
         name: "cura"
     }
+    LayoutMirroring.enabled: catalog.i18nIsRightToLeft()
+    LayoutMirroring.childrenInherit: true
 
     anchors
     {
@@ -98,6 +100,7 @@ Item
             width: UM.Theme.getSize("stage_menu").height
             onClicked: Cura.Actions.open.trigger()
             hoverEnabled: true
+            anchors.left: parent.left
 
             contentItem: Item
             {
@@ -110,6 +113,7 @@ Item
                     width: UM.Theme.getSize("button_icon").width
                     height: UM.Theme.getSize("button_icon").height
                     color: UM.Theme.getColor("icon")
+                    mirror: catalog.i18nIsRightToLeft()
 
                     sourceSize.height: height
                 }
