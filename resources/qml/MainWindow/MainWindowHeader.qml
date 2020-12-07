@@ -19,6 +19,9 @@ Item
     implicitHeight: UM.Theme.getSize("main_window_header").height
     implicitWidth: UM.Theme.getSize("main_window_header").width
 
+    LayoutMirroring.enabled: catalog.i18nIsRightToLeft()
+    LayoutMirroring.childrenInherit: true
+ 
     Image
     {
         id: logo
