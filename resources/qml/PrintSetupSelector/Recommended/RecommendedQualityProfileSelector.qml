@@ -52,6 +52,8 @@ Item
                 text: catalog.i18nc("@label", "Profiles")
                 font: UM.Theme.getFont("medium")
                 width: labelColumnWidth
+                mirrorIcon: catalog.i18nIsRightToLeft()
+                anchors.left: parent.left
             }
             UM.SimpleButton
             {
@@ -122,6 +124,7 @@ Item
                     color: UM.Theme.getColor("text")
                     renderType: Text.NativeRendering
                     elide: Text.ElideRight
+                    horizontalAlignment: Text.AlignLeft
                 }
 
                 Cura.RadioCheckbar

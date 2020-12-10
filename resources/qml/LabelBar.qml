@@ -42,22 +42,7 @@ Item
                     font: UM.Theme.getFont("default")
                     renderType: Text.NativeRendering
                     height: contentHeight
-                    anchors
-                    {
-                        // Some magic to ensure that the items are aligned properly.
-                        // We want the following:
-                        // First item should be aligned to the left, no margin.
-                        // Last item should be aligned to the right, no margin.
-                        // The middle item(s) should be aligned to the center of the "item" it's showing (hence half the itemsize as offset).
-                        // We want the center of the label to align with the center of the item, so we negatively offset by half the contentWidth
-                        right: index + 1 === repeater.count ? parent.right: undefined
-                        left: index + 1 === repeater.count || index === 0 ? undefined: parent.left
-                        leftMargin: Math.round((itemSize - contentWidth) * 0.5)
-
-                        // For some reason, the last label in the row gets misaligned with Qt 5.10. This lines seems to
-                        // fix it.
-                        verticalCenter: parent.verticalCenter
-                    }
+                    anchors.left: parent.left
                 }
             }
         }

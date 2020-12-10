@@ -47,6 +47,7 @@ Item
         {
             id: enableAdhesionCheckBox
             anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
 
             property alias _hovered: adhesionMouseArea.containsMouse
 
@@ -70,7 +71,7 @@ Item
 
                 onEntered:
                 {
-                    base.showTooltip(enableAdhesionCheckBox, Qt.point(-enableAdhesionContainer.x - UM.Theme.getSize("thick_margin").width, 0),
+                    base.showTooltip(enableAdhesionCheckBox, Qt.point(catalog.i18nIsRightToLeft()?(-enableAdhesionContainer.x- enableAdhesionContainer.width + UM.Theme.getSize("thick_margin").width):(-enableAdhesionContainer.x - UM.Theme.getSize("thick_margin").width), 0),
                         catalog.i18nc("@label", "Enable printing a brim or raft. This will add a flat area around or under your object which is easy to cut off afterwards."));
                 }
                 onExited: base.hideTooltip()

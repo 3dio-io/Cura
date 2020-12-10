@@ -228,7 +228,7 @@ Item
                 Cura.MachineManager.setSettingForAllExtruders("gradual_infill_steps", "value", infill_steps_value)
             }
 
-            onEntered: base.showTooltip(enableGradualInfillCheckBox, Qt.point(-infillSliderContainer.x - UM.Theme.getSize("thick_margin").width, 0),
+            onEntered: base.showTooltip(enableGradualInfillCheckBox, Qt.point(catalog.i18nIsRightToLeft()?(-infillSliderContainer.x - infillSliderContainer.width + UM.Theme.getSize("thick_margin").width):(infillSliderContainer.x - UM.Theme.getSize("thick_margin").width), 0),
                     catalog.i18nc("@label", "Gradual infill will gradually increase the amount of infill towards the top."))
 
             onExited: base.hideTooltip()

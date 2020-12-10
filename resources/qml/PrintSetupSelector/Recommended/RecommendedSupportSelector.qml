@@ -48,7 +48,8 @@ Item
         {
             id: enableSupportCheckBox
             anchors.verticalCenter: parent.verticalCenter
-
+            anchors.left: parent.left
+            
             property alias _hovered: enableSupportMouseArea.containsMouse
 
             style: UM.Theme.styles.checkbox
@@ -67,7 +68,7 @@ Item
 
                 onEntered:
                 {
-                    base.showTooltip(enableSupportCheckBox, Qt.point(-enableSupportContainer.x - UM.Theme.getSize("thick_margin").width, 0),
+                    base.showTooltip(enableSupportCheckBox, Qt.point(catalog.i18nIsRightToLeft()?(-enableSupportContainer.x - enableSupportContainer.width + UM.Theme.getSize("thick_margin").width):(-enableSupportContainer.x - UM.Theme.getSize("thick_margin").width), 0),
                         catalog.i18nc("@label", "Generate structures to support parts of the model which have overhangs. Without these structures, such parts would collapse during printing."))
                 }
                 onExited: base.hideTooltip()

@@ -24,7 +24,6 @@ Item
     implicitHeight: checkboxSize
 
     property var dataModel: null
-
     // The horizontal inactive bar that sits behind the buttons
     Rectangle
     {
@@ -51,7 +50,7 @@ Item
         height: checkboxSize
         width: parent.width
         spacing: 0
-
+        anchors.left: parent.left
         Repeater
         {
             id: repeater
@@ -88,6 +87,7 @@ Item
                     id: activeComponent
                     sourceComponent: isEnabled? checkboxComponent : disabledComponent
                     width: checkboxSize
+                    anchors.left: parent.left
 
                     property var modelItem: model
                 }
